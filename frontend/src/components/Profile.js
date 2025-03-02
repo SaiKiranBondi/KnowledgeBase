@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; // ✅ Import Link
 
 const Profile = ({ setToken }) => {
   const [user, setUser] = useState(null);
@@ -140,7 +140,14 @@ const Profile = ({ setToken }) => {
           />
           <button onClick={changePassword}>Change Password</button>
 
-          {/* Spacing between buttons */}
+          {/* ✅ Added Home Link */}
+          <br />
+          <br />
+          <Link to="/" className="home-btn">
+            🏠 Back to Home
+          </Link>
+
+          {/* Spacing before Logout */}
           <br />
           <br />
           <button onClick={clearToken} className="logout-btn">

@@ -4,12 +4,13 @@ import {
   Route,
   Routes,
   Navigate,
-  Link,
 } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Profile from "./components/Profile";
 import ForgotPassword from "./components/ForgotPassword"; // ✅ Import Forgot Password
+import Home from "./components/Home"; // ✅ Import Home
+import TaskPage from "./components/TaskPage"; // ✅ Import TaskPage
 import "./styles/App.css";
 
 function App() {
@@ -29,14 +30,14 @@ function App() {
               path="/register"
               element={<Register setToken={setToken} />}
             />
-            <Route path="/forgot-password" element={<ForgotPassword />} />{" "}
-            {/* ✅ Add Route */}
+            <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="*" element={<Navigate to="/login" replace />} />
           </>
         ) : (
           <>
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile setToken={setToken} />} />
+            <Route path="/tasks" element={<TaskPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </>
         )}
@@ -44,15 +45,5 @@ function App() {
     </Router>
   );
 }
-
-// ✅ Home Page
-const Home = () => (
-  <div className="home-container">
-    <h1>👋 Hello!</h1>
-    <Link to="/profile" className="profile-btn">
-      Go to Profile
-    </Link>
-  </div>
-);
 
 export default App;

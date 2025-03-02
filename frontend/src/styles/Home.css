@@ -1,0 +1,80 @@
+/* ✅ Home Container - Keeps everything inside the box */
+.home-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  width: 95%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 20px auto;
+  height: 90vh; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Prevent outer scrolling */
+}
+
+/* ✅ Stylish Welcome Text */
+.welcome-text {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2c3e50; /* Darker shade for better visibility */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+/* ✅ Navigation buttons - Always visible at top */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+  position: sticky;
+  top: 0;
+  background: white;
+  padding-bottom: 10px;
+  z-index: 10;
+}
+
+/* ✅ Buttons */
+.nav-btn {
+  text-decoration: none;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #2980b9;
+}
+
+/* ✅ Scrollable Task List */
+.task-list-container {
+  width: 100%;
+  max-width: 900px;
+  overflow-y: auto;
+  flex-grow: 1; /* Allows the list to take remaining space */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ Scrollbar Styling */
+.task-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-list-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.task-list-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}

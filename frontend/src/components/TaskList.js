@@ -16,10 +16,23 @@ const TaskList = ({ tasks = [], fetchTasks, showAll = false }) => {
 
   const markCompleted = async (id) => {
     try {
-      await axios.put(`http://localhost:8000/tasks/${id}/complete`);
-      fetchTasks();
+      const token = localStorage.getItem("token");
+      if (!token) {
+        console.error("No authentication token found.");
+        return;
+      }
+
+      await axios.post(
+        `http://localhost:8000/tasks/${id}/complete`,
+        {},
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+
+      fetchTasks(); // ✅ Refresh task list
     } catch (error) {
-      console.error("Error marking task as completed:", error);
+      console.error("Error marking task as completed:", error.response?.data);
     }
   };
 

@@ -1,16 +1,13 @@
-/* TaskPage.css */
-
 .task-page {
   background: white;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 800px;
+  width: 95%; /* Increased width */
+  max-width: 1000px; /* Wider task page */
   text-align: center;
   margin: 20px auto;
   height: 90vh;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   margin-bottom: 15px;
   gap: 10px;
 }
@@ -41,12 +38,33 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 900px;
 }
 
-/* ✅ Task Buttons */
-.task-buttons {
+/* ✅ Task List - Internal Scroll */
+.task-list {
+  width: 100%;
+  max-width: 900px;
+  overflow-y: auto;
+  flex-grow: 1; /* Ensures list takes remaining space */
+  padding: 10px;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ Scrollable List */
+.task-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
 /* ✅ Task Item */
@@ -57,16 +75,15 @@
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 800px;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-/* ✅ Task Actions */
-.task-actions {
+/* ✅ Task Buttons */
+.task-buttons {
   display: flex;
   gap: 10px;
   margin-top: 10px;
@@ -152,4 +169,14 @@
 
 .toggle-reason-btn:hover {
   background: #0056b3;
+}
+
+/* ✅ Ensure Internal Scroll Works */
+.task-page {
+  overflow: hidden; /* Prevent outer scroll */
+}
+
+.task-list {
+  overflow-y: auto;
+  height: 70vh; /* Ensures the list is scrollable inside */
 }

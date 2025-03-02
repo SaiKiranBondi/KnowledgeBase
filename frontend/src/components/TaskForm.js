@@ -47,7 +47,6 @@ const TaskForm = ({ fetchTasks }) => {
 
   return (
     <form className="task-form" onSubmit={handleSubmit}>
-      <h3>➕ Add a New Task</h3>
       {error && <p className="error-text">{error}</p>}
       <input
         type="text"

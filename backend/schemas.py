@@ -35,18 +35,19 @@ class ForgotPasswordRequest(BaseModel):
 class TaskCreate(BaseModel):
     title: str
     description: str
-    due_date: datetime  # Ensure the frontend sends this in the correct format
-    priority: Optional[str] = "Medium"  # Default to Medium
-    reason: Optional[str] = None  # 🔹 Add reason here
+    due_date: datetime
+    priority: Optional[str] = "Medium"  # ✅ AI will override this
+    reason: Optional[str] = None  # ✅ AI will generate this
     completed: Optional[bool] = False
 
 
 class TaskResponse(TaskCreate):
     id: int
-    completed: bool
+    priority: str  # ✅ Include priority in response
+    reason: Optional[str]  # ✅ Include AI-generated reason in response
 
     class Config:
-        from_attributes = True  # ✅ Ensure compatibility with SQLAlchemy models
+        from_attributes = True
 
 
 # ✅ UserResponse model to fix the error in main.py
@@ -56,4 +57,4 @@ class UserResponse(BaseModel):
     email: EmailStr
 
     class Config:
-        from_attributes = True  # ✅ Ensures compatibility with SQLAlchemy
+        from_attributes = True

@@ -91,3 +91,18 @@ p a:hover {
   background: #6a11cb;
   color: white;
 }
+
+.home-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  background-color: #2980b9;
+}

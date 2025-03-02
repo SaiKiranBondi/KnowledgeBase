@@ -45,6 +45,7 @@ class Task(Base):
     description = Column(String, nullable=True)
     due_date = Column(DateTime, nullable=False)
     priority = Column(String, default="Medium")
+    reason = Column(String, nullable=True)  # ✅ New column for AI-generated reason
     completed = Column(Boolean, default=False)
     owner_id = Column(Integer, ForeignKey("users.id"))
 

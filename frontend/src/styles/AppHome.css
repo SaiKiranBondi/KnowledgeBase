@@ -1,0 +1,112 @@
+/* AppHome.css */
+
+.app-home {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+  overflow-y: auto; /* Allows internal scrolling */
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #333;
+}
+
+.task-item {
+  background: #f9f9f9;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Priority Colors (Unified) */
+.priority-tag {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.priority-tag.low {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.priority-tag.medium {
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+}
+
+.priority-tag.high {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+/* See All Tasks Button */
+.see-all-btn {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.see-all-btn:hover {
+  background: #0056b3;
+}
+
+/* Task Actions */
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+/* Complete Button */
+.complete-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.complete-btn:hover {
+  background: #218838;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}

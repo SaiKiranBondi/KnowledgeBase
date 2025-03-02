@@ -1,0 +1,93 @@
+/* Apply full-page gradient background */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #8e2de2,
+    #4a00e0
+  ); /* Luxury Purple Gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Centered authentication container */
+.auth-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 370px; /* ✅ Slightly increased width */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Slight hover effect */
+.auth-container:hover {
+  transform: scale(1.03);
+}
+
+/* Form inputs - Fixed Alignment */
+input {
+  width: calc(100% - 20px); /* ✅ Ensure equal spacing inside box */
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box; /* ✅ Ensures proper spacing */
+}
+
+/* Buttons */
+button {
+  width: 85%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+/* Register link */
+p a {
+  color: #6a11cb;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Home Page */
+.home-container {
+  text-align: center;
+  color: white;
+}
+
+.profile-btn {
+  background: white;
+  color: #6a11cb;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.profile-btn:hover {
+  background: #6a11cb;
+  color: white;
+}

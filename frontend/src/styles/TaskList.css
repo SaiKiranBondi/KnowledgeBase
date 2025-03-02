@@ -1,0 +1,121 @@
+/* TaskList.css */
+
+.priority-low {
+  background-color: #dff0d8;
+  color: #3c763d;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.priority-medium {
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.priority-high {
+  background-color: #f2dede;
+  color: #a94442;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Centered Task Items */
+.task-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ Centered */
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  width: 90%;
+  max-width: 600px; /* ✅ Matches Task Page */
+  margin: 10px auto; /* ✅ Centers horizontally */
+}
+
+/* Task Header - Aligning Title & Buttons in One Line */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Align Task Buttons in One Row */
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Reason Button */
+.toggle-reason-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 0.9rem;
+}
+
+.toggle-reason-btn:hover {
+  background: #0056b3;
+}
+
+/* Hide Scrollbars for Aesthetic */
+.task-list {
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Deadline Text Styling */
+.deadline-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #a94442;
+}
+
+/* Buttons (Complete & Delete) */
+.complete-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.complete-btn:hover {
+  background: #218838;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}

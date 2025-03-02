@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+SQLAlchemy
+pydantic
+passlib[bcrypt]
+python-dotenv
+email-validator
+pyjwt
+jose
+bcrypt
+requests
+alembic
+smtplib
+langchain
+langchain-google-genai
